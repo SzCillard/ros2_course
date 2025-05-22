@@ -23,6 +23,7 @@ setup(
     entry_points={
         "console_scripts": [
             "turtlesim_controller = ros2_course.turtlesim_controller:main",
+            "draw_sz = ros2_course.turtlesim_controller:draw_sz",
         ],
     },
 )

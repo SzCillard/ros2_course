@@ -50,7 +50,7 @@ class TurtlesimController(Node):
             # Normalize angle to range [-pi, pi]
             angle_error = (angle_error + math.pi) % (2 * math.pi) - math.pi
 
-            if distance < 0.001 and angle_error < 0.001:  # Stop when close enough
+            if distance < 0.1 and angle_error < 0.1:  # Stop when close enough
                 break
 
             # Set linear and angular velocities
@@ -67,10 +67,7 @@ class TurtlesimController(Node):
         self.get_logger().info("Arrived at destination.")
 
 
-def main(args=None):
-    rclpy.init(args=args)
-    tc = TurtlesimController()
-
+def draw_sz(tc):
     # S betű
     tc.go_to(1.0, 2.0, 5, 6)
     tc.go_to(1.0, 2.0, 5, 5)
@@ -94,6 +91,13 @@ def main(args=None):
     tc.go_to(1.0, 2.0, 6.8, 3.5)
     tc.go_to(1.0, 3.0, 7, 3.5)
     tc.go_to(1.0, 2.0, 8.5, 3.5)
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    tc = TurtlesimController()
+
+    draw_sz(tc)
 
     tc.destroy_node()
     rclpy.shutdown()
