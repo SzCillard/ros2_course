@@ -1,8 +1,8 @@
-🐢 Turtlesim Controller – Dokumentáció
+🐢 ### Turtlesim Controller – Dokumentáció
 Cél
 Ez a Python program a ROS 2 (Robot Operating System) környezetében futó turtlesim szimulátor irányítására szolgál. A cél, hogy egy teknőcöt adott koordinátákra mozgassunk, "Sz" betűt fogja kirajzolni.
 
-Felépítés:
+### Felépítés:
 A program 2 fő részből áll:
 
 TurtlesimController osztály
@@ -17,7 +17,7 @@ Példányosítja a vezérlő objektumot
 
 Meghívja az go_to() függvényeket, amelyekkel egy-egy betű kirajzolása történik
 
-Működés:
+### Működés:
 A teknős mozgatása az go_to(speed, omega, x, y) függvény segítségével történik, amely egy célkoordinátához irányítja a teknőst:
 
 speed: lineáris sebesség (mennyire gyorsan halad előre)
@@ -42,11 +42,9 @@ Leállítja a teknőst, ha elég közel ért a célponthoz
 
 Használati példa – Betűk rajzolása
 
-python
-Másolás
-Szerkesztés
 tc.go_to(1.0, 3.0, 5, 6)  # Elindul az S betű első pontjára
 tc.go_to(1.0, 3.0, 5, 5)  # stb...
+
 Ezeket a pontokat úgy kell összeállítani, hogy a teknős betűket rajzoljon a képernyőre.
 
 Paraméterek hatása
