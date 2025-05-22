@@ -1,6 +1,6 @@
 🐢 Turtlesim Controller – Dokumentáció
 Cél
-Ez a Python program a ROS 2 (Robot Operating System) környezetében futó turtlesim szimulátor irányítására szolgál. A cél, hogy egy teknőcöt adott koordinátákra mozgassunk, és akár betűket vagy alakzatokat is rajzoltathassunk vele, például "S" és "Z" betűket.
+Ez a Python program a ROS 2 (Robot Operating System) környezetében futó turtlesim szimulátor irányítására szolgál. A cél, hogy egy teknőcöt adott koordinátákra mozgassunk, "Sz" betűt fogja kirajzolni.
 
 Felépítés:
 A program 2 fő részből áll:
